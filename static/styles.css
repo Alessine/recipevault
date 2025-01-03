@@ -1,0 +1,152 @@
+* {
+    color: #4a3831
+        /* brown */
+}
+
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Color Palette */
+nav .navbar-brand .petrol {
+    color: #006165;
+    font-weight: bold;
+}
+
+nav .navbar-brand .grey-dark {
+    color: #e9edf0;
+}
+
+nav .navbar-brand .grey-light {
+    color: #F8F9FA;
+}
+
+nav .navbar-brand .brown {
+    color: #4a3831;
+    font-weight: bold;
+}
+
+.section {
+    margin: auto;
+    width: 80%;
+}
+
+.teaser-box {
+    margin: auto;
+    width: 80%;
+}
+
+h1 {
+    padding: 22px;
+    font-weight: bold;
+}
+
+h2 {
+    padding-top: 18px;
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+
+p {
+    padding: 5px;
+}
+
+img {
+    border-radius: 10px;
+    border: 1px solid #006165;
+    /* petrol */
+    width: 700px;
+    height: auto;
+    max-width: 100%;
+}
+
+button {
+    border-radius: 5px;
+    padding: 7px;
+    color: #4a3831;
+    /* brown */
+    background: #F8F9FA;
+    /* grey-light */
+    border: 1px solid #006165;
+    /* petrol */
+}
+
+main button {
+    margin: auto;
+    margin-top: 20px;
+    width: 150px;
+}
+
+button:hover {
+    background: #e9edf0;
+    /* grey-dark */
+    font-weight: bold;
+}
+
+form.button {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.recipe-features {
+    display: flex;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 15px;
+
+}
+
+ul.recipe-features li {
+    font-weight: bold;
+    padding: 3px;
+}
+
+.recipe-box {
+    display: flex;
+}
+
+.ingredients-table {
+    padding-left: 15px;
+    text-align: left;
+    width: 40%;
+}
+
+.instructions {
+    padding-right: 15px;
+    text-align: left;
+    width: 60%;
+}
+
+table {
+    width: 100%;
+}
+
+td.numeric {
+    text-align: right;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-right: 7px;
+    width: 25%;
+
+}
+
+td.text {
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 7px;
+    width: 75%
+}
+
+a {
+    color: #4a3831;
+}

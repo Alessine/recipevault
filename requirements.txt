@@ -1,0 +1,8 @@
+# Python 3.8.12
+
+# Additional Libraries:
+cs50~=9.4.0
+Flask~=3.1.0
+Flask-Session~=0.8.0
+requests~=2.32.3
+Werkzeug~=3.1.3

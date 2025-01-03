@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <h1>Your Favorites</h1>
+        {% if favorites|length < 1 %}
+            <p>It looks like you haven't chosen any favorite recipes yet.</p>
+        {% else %}
+            <ul>
+                {% for favorite in favorites %}
+                    <li>
+                        <div class="teaser-box">
+                            <h2>{{ favorite["title"] }}</h2>
+                            <p>{{ favorite["summary"] | safe }}</p>
+                            <img src="{{ favorite['image'] }}" />
+                            <form class="button" method="post" action="/favorites">
+                                <button type="submit" name="remove_favorite" value='remove_{{ favorite["spoon_id"] }}'>Remove</button>
+                                <button type="submit" name="view_recipe" value='view_{{ favorite["spoon_id"] }}'>View Recipe</button>
+                            </form>
+                            <p></p>
+                            <hr>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </div>
+{% endblock %}
