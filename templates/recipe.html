@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <h1>{{ recipe_information["title"] }}</h1>
+        <div class="teaser-box"></div>
+        <p> {{ recipe_information["summary"] | safe }}</p>
+        <ul class="recipe-features">
+            {% if recipe_information["vegetarian"] %}
+                <li>Vegetarian</li>
+            {% endif %}
+            {% if recipe_information["vegan"] %}
+                <li>Vegan</li>
+            {% endif %}
+            {% if recipe_information["glutenFree"] %}
+                <li>Gluten Free</li>
+            {% endif %}
+            {% if recipe_information["dairyFree"] %}
+                <li>Dairy Free</li>
+            {% endif %}
+            {% if recipe_information["veryHealthy"] %}
+                <li>Very Healthy</li>
+            {% endif %}
+            {% if recipe_information["cheap"] %}
+                <li>Cheap</li>
+            {% endif %}
+        </ul>
+        <p></p>
+        <img src="{{ recipe_information['image'] }}" />
+        {% if not existing_fav %}
+            <form class="button" method="post" action="/recipe">
+                <button type="submit" name="add_favorite" value='favorite_{{ recipe_information["id"] }}'>Add To Favorites</button>
+            </form>
+            <p></p>
+        {% endif %}
+        <p></p>
+    </div>
+    <hr>
+    <div class="recipe-box">
+        <div class="ingredients-table">
+            <h2>Ingredients</h2>
+            <table>
+                <tbody>
+                    {% for ingredient in recipe_information["extendedIngredients"] %}
+                        <tr>
+                            <td class="numeric">{{ ingredient["measures"]["metric"]["amount"] | round | int }} {{ ingredient["measures"]["metric"]["unitShort"] }}</td>
+                            <td class="text">{{ ingredient["originalName"] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>{{ recipe_information["instructions"] | striptags }}</p>
+        </div>
+    </div>
+    </div>
+{% endblock %}

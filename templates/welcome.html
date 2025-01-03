@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block main %}
+    <div class="section">
+        <h1>Welcome back to RecipeVault, {{ user[0]["username"] }}!</h1>
+        <p>Check out our newest suggestion below or look through the recipes you previously saved as your favorites.<br> Coming Soon: Search!</p>
+        <div class="teaser-box">
+            <h2>Our Suggestion: {{ recipe_information["title"] }}</h2>
+            <p>{{ recipe_information["summary"] | safe }}</p>
+            <div class="image-container"><img src="{{ recipe_information['image'] }}" alt="Photo of the Dish" /></div>
+            <form class="button" method="post" action="/">
+                <button class="left" type="submit" name="next_suggestion" value="Next Suggestion">New Suggestion</button>
+                <button class="left" type="submit" name="view_recipe" value="View Recipe">View Recipe</button>
+            </form>
+            <p></p>
+        </div>
+    </div>
+{% endblock %}
