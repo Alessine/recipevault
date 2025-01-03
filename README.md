@@ -1,5 +1,4 @@
 # CS50x Final Project: RecipeVault
-
 ## Basic Information
 **Angela Niederberger**
 
@@ -9,6 +8,8 @@ Greifensee, Switzerland<br>
 
 Video Demo: [https://youtu.be/2aFnBx5FbdY](https://youtu.be/2aFnBx5FbdY)<br>
 Date of Recording: 2. January 2025
+
+[![YouTube Video of the Project Demo](https://img.youtube.com/vi/2aFnBx5FbdY/0.jpg)](https://www.youtube.com/watch?v=2aFnBx5FbdY)
 
 ## Description
 
